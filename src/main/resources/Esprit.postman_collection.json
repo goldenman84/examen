@@ -1,0 +1,153 @@
+{
+	"info": {
+		"_postman_id": "f30daa2d-15a7-4fb6-8c17-fec3895ab900",
+		"name": "Esprit",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "medecins",
+			"item": [
+				{
+					"name": "all medecins",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/esprit/medecins?clinique",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"esprit",
+								"medecins"
+							],
+							"query": [
+								{
+									"key": "clinique",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Créer Medecin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"nomMedecin\": \"LAFFET\",\r\n    \"telephone\" : \"12345678\",\r\n    \"cliniques\" : []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/esprit/medecins",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"esprit",
+								"medecins"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Créer Medecin EN AFFECTANT UN CLINIQUE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"nomMedecin\": \"MED TOUNSI\",\r\n    \"telephone\" : \"70000000\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/esprit/medecins/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"esprit",
+								"medecins",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cliniques",
+			"item": [
+				{
+					"name": "all cliniques",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/esprit/cliniques",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"esprit",
+								"cliniques"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Créer Clinique",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"nomClinique\": \"TAOUFIK\",\r\n    \"adresse\" : \"Tunis\",\r\n    \"medecins\" : []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/esprit/cliniques",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"esprit",
+								"cliniques"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
